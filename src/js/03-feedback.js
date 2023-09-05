@@ -20,10 +20,12 @@ function onInput(event) {
 
 function onSubmit(event) {
     event.preventDefault();
-    console.log(JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)));
+    if (form.message.value === "" || form.email.value ==="" ) { alert("All field must be writed"); return;}
+    else
+    {console.log(JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)));
 
    localStorage.removeItem(LOCALSTORAGE_KEY);
-   form.reset();
+   form.reset();}
 };
    
 
